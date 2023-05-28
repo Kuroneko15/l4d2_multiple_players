@@ -6,7 +6,7 @@
 #define PLUGIN_NAME				"L4D2 Multiple Players"
 #define PLUGIN_AUTHOR			"Lyseria Editor"
 #define PLUGIN_DESCRIPTION		"Edit for me"
-#define PLUGIN_VERSION			"1.0"
+#define PLUGIN_VERSION			"1.4"
 #define PLUGIN_URL				"Somewhere in alliedmodders"
 
 #define GAMEDATA 				"l4d2_multiple_players"

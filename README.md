@@ -11,5 +11,21 @@ Onigrinal Plugin: Đâu đó trên Alienmodders mà tôi đã quên.
 * [Left 4 Dead 2 - CreateSurvivorBot](https://forums.alliedmods.net/showpost.php?p=2729883&postcount=16)
 * [[L4D2]Adrenaline_Recovery](https://forums.alliedmods.net/showthread.php?p=2606439)
 
-  - Bên trong có kèm file txt hướng dẫn sử dụng (guide) và những command mong các bạn hãy đọc kỹ trước khi sử dụng.
+  - Bên trong souremod có kèm file readme hướng dẫn sử dụng và những command mong các bạn hãy đọc kỹ trước khi sử dụng.
+
+## Changelog - Cập nhật mới:
+* v1.4 (28 - 5 - 2023)
+  - Left4dead2 cập nhật mới. Gỡ code Real Zoey Unlock.
+* v1.3 (27 - 5 - 2023)
+  - Biên dịch tất cả plugin sang tiếng anh. Cfg lỗi khi tạo tiếng việt.
+* v1.2 (25 - 5 - 2023)
+  - Thay đổi nhỏ plugin.
+  - Thêm gamedata.
+* v1.1 (22 - 5 - 2023)
+  - Biên dịch tất cả plugin sang tiếng việt
+  - Phát hiện lỗi crash, hãy chờ xử lý.
+* v1.0 (20 - 5 - 2023)
+  - Add plugin
+  - Thêm 1 vài return. Compile Dev 1.12 Build 7017. 
+
 
