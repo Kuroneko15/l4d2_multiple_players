@@ -6,7 +6,7 @@
 #define PLUGIN_NAME				"L4D2 Multiple Players"
 #define PLUGIN_AUTHOR			"Lyseria Editor"
 #define PLUGIN_DESCRIPTION		"Edit for me"
-#define PLUGIN_VERSION			"1.4"
+#define PLUGIN_VERSION			"1.5"
 #define PLUGIN_URL				"Somewhere in alliedmodders"
 
 #define GAMEDATA 				"l4d2_multiple_players"
@@ -338,7 +338,8 @@ public void OnPluginStart() {
 	AutoExecConfig(true, "l4d2_multiple_players");
 
 	RegConsoleCmd("sm_afk",				cmdGoIdle,		"IDLE");
-	RegConsoleCmd("sm_thamgia",				cmdGoIdle,		"IDLE");
+	RegConsoleCmd("sm_idle",				cmdGoIdle,		"IDLE");
+	RegConsoleCmd("sm_treomay",				cmdGoIdle,		"IDLE");
 	
 	RegConsoleCmd("sm_teams",			cmdTeamPanel,	"Team_menu");
 	RegConsoleCmd("sm_team",			cmdTeamPanel,	"Team_menu");
@@ -1575,7 +1576,6 @@ MRESReturn DD_SurvivorBot_SetHumanSpectator_Pre(int pThis, DHookParam hParams) {
 	return MRES_Supercede;
 }
 
-// [L4D(2)] Survivor Identity Fix for 5+ Survivors (https://forums.alliedmods.net/showpost.php?p=2718792&postcount=36)
 MRESReturn DD_CBasePlayer_SetModel_Post(int pThis, DHookParam hParams) {
 	if (pThis < 1 || pThis > MaxClients || !IsClientInGame(pThis) || IsFakeClient(pThis))
 		return MRES_Ignored;
@@ -1623,7 +1623,6 @@ void WriteTakeoverPanel(int client, int bot) {
 	EndMessage();
 }
 
-// L4D2_Adrenaline_Recovery (https://github.com/LuxLuma/L4D2_Adrenaline_Recovery/blob/ac3f62eebe95d80fcf610fb6c7c1ed56bf4b31d2/%5BL4D2%5DAdrenaline_Recovery.sp#L96-L177)
 int GetCharacter(int client) {
 	char model[31];
 	GetClientModel(client, model, sizeof model);
@@ -1757,7 +1756,6 @@ void RemoveAllWeapons(int client) {
 	}
 }
 
-// https://github.com/bcserv/smlib/blob/2c14acb85314e25007f5a61789833b243e7d0cab/scripting/include/smlib/math.inc#L144-L163
 #define SIZE_OF_INT	2147483647 // without 0
 int Math_GetRandomInt(int min, int max) {
 	int random = GetURandomInt();
