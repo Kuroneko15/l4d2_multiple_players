@@ -98,17 +98,17 @@
 		{
 			"RoundRespawn_Offset"
 			{
-				"linux"		"25" 
-				"windows"	"15" 
+				"linux"		"25"
+				"windows"	"15"
 			}
 
-			"RoundRespawn_Byte" 
+			"RoundRespawn_Byte"
 			{
-				"linux"		"117" 
-				"windows"	"117" /
+				"linux"		"117"
+				"windows"	"117"
 			}
 
-			"m_hWeaponHandle"// Khôi phục vũ khí
+			"m_hWeaponHandle"
 			{
 				"linux"		"16272"
 				"windows"	"16292"
@@ -126,13 +126,11 @@
 				"windows"	"16300"
 			}
 
-
 			"m_hHiddenWeapon"
 			{
 				"linux"		"16288"
 				"windows"	"16308"
 			}
-
 
 			"m_isOutOfCheckpoint"
 			{
@@ -140,7 +138,7 @@
 				"windows"	"14840"
 			}
 
-			"RestartScenarioTimer"// restart nếu chết
+			"RestartScenarioTimer"
 			{
 				"linux"		"424"
 				"windows"	"424"
@@ -155,7 +153,6 @@
 				"library"	"server"
 				"linux"		"@_Z22NextBotCreatePlayerBotI11SurvivorBotEPT_PKc"
 				"windows"	"\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x85\x2A\x74\x2A\x8B\x2A\x8B\x92"
-
 			}
 
 			"CTerrorPlayer::RoundRespawn"
@@ -163,7 +160,6 @@
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer12RoundRespawnEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x75\x2A\x8B\x2A\xE8\x2A\x2A\x2A\x2A\xC6\x86"
-
 			}
 
 			"CCSPlayer::State_Transition"
@@ -193,21 +189,18 @@
 				"linux"    "@_ZN13CTerrorPlayer11TakeOverBotEb"
 				"windows"  "\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x33\x2A\x89\x2A\x2A\x53\x56\x8D"
 			}
-
 			"CBasePlayer::SetModel"
 			{
 				"library"	"server"
 				"linux"		"@_ZN11CBasePlayer8SetModelEPKc"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x50\x8B\x2A\xE8\x2A\x2A\x2A\x2A\x8B\x3D"
 			}
-
 			"CTerrorPlayer::GiveDefaultItems"
 			{
 				"library"	"server"
 				"linux"		"@_ZN13CTerrorPlayer16GiveDefaultItemsEv"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x2A\x50\xE8\x2A\x2A\x2A\x2A\x83\x2A\x2A\x84\x2A\x0F\x84\x2A\x2A\x2A\x2A\xA1\x2A\x2A\x2A\x2A\x8B\x88"
 			}
-
 			"CDirector::IsInTransition"
 			{
 				"library"	"server"
@@ -226,7 +219,6 @@
 				"library"	"server"
 				"windows"	"\x2A\x2A\x2A\x2A\x2A\x2A\x56\x57\x8B\x2A\x8B\x0D\x2A\x2A\x2A\x2A\xE8\x2A\x2A\x2A\x2A\x84\x2A\x0F"
 			}
-
 			"RestoreTransitionedSurvivorBots"
 			{
 				"library"	"server"

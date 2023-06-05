@@ -6,7 +6,7 @@
 #define PLUGIN_NAME				"L4D2 Multiple Players"
 #define PLUGIN_AUTHOR			"Lyseria Editor"
 #define PLUGIN_DESCRIPTION		"Edit for me"
-#define PLUGIN_VERSION			"1.5"
+#define PLUGIN_VERSION			"1.7"
 #define PLUGIN_URL				"Somewhere in alliedmodders"
 
 #define GAMEDATA 				"l4d2_multiple_players"
@@ -308,7 +308,7 @@ public void OnPluginStart() {
 	g_cSpecNotify =				CreateConVar("multiple_player_spec_notify",		"0",		"Notify message to survivor in spectator \n0=No message, 1=Chat, 2=Hintext, 3=Menu Option.", CVAR_FLAGS);
 	g_eWeapon[0].Flags =		CreateConVar("multiple_player_give_slot0",			"31",	"Slot 0. Main weapon of survivor: \n0=Nothing, 1=Uzi, 4=Silent smg, 8=Pumpshotgun, 16=Chromeshotgun, 32=Rifle, 128=Ak47, 2048=HuntingRifle, 31=Tier1, 32736=Tier2, 98304=Tier0.", CVAR_FLAGS);
 	g_eWeapon[1].Flags =		CreateConVar("multiple_player_give_slot1",			"64",		"Slot 1.Second weapon of survivor. \n0=Nothing, 1=Pistol, 2=Magnum, 8=Fireaxe, 16=Frying Pan,64=Baseball Bat, 1024=Katana, 131071=Random All", CVAR_FLAGS);
-	g_eWeapon[2].Flags = 		CreateConVar("multiple_player_give_slot2",			"0",		"Slot 2. Bomb for survivor. \n0=Nothing, 1=Molotov, 2=Pipebomb, 4=Vomitjar, 7=Random.", CVAR_FLAGS);
+	g_eWeapon[2].Flags =		CreateConVar("multiple_player_give_slot2",			"0",		"Slot 2. Bomb for survivor. \n0=Nothing, 1=Molotov, 2=Pipebomb, 4=Vomitjar, 7=Random.", CVAR_FLAGS);
 	g_eWeapon[3].Flags =		CreateConVar("multiple_player_give_slot3",			"0",		"Slot 3. Rescue supplies for survivor.\n0=Nothing, 1=First aid kit, 2=Defibrillator,4=Incendary Ammo,8=Explosive Ammo, 15=Random.", CVAR_FLAGS);
 	g_eWeapon[4].Flags =		CreateConVar("multiple_player_give_slot4",			"0",		"Slot 4. Medicine for survivor.\n0=Nothing,1=Pills, 2=Adrenaline, 3=Random.", CVAR_FLAGS);
 	g_cGiveType =				CreateConVar("multiple_player_give_type",			"2",		"After player join and plugin creat Bot. Auto caculate if have setting random equipment. \n0=Do nothing. \n1=The setting of each slot. \n2=The average equipment of survivor in game (only primary and secondary weapons).", CVAR_FLAGS);
@@ -696,7 +696,7 @@ void CvarChanged_General(ConVar convar, const char[] oldValue, const char[] newV
 }
 
 void GeCvars_General() {
-	g_iJoinLimit = 		g_cJoinLimit.IntValue;
+	g_iJoinLimit =		g_cJoinLimit.IntValue;
 	g_iJoinFlags =		g_cJoinFlags.IntValue;
 	g_bJoinRespawn =	g_cJoinRespawn.BoolValue;
 	g_iSpecNotify =		g_cSpecNotify.IntValue;
@@ -1163,9 +1163,16 @@ void GiveMelee(int client, const char[] meleeName) {
 	char buffer[64];
 	if (g_aMeleeScripts.FindString(meleeName) != -1)
 		strcopy(buffer, sizeof buffer, meleeName);
+	/* Plugin tính toán sai số lượng trang bị người chơi 
 	else
 		g_aMeleeScripts.GetString(Math_GetRandomInt(0, g_aMeleeScripts.Length - 1), buffer, sizeof buffer);
-	
+	*/
+	else 
+	{
+		int num = g_aMeleeScripts.Length;
+		if (num)
+			g_aMeleeScripts.GetString(Math_GetRandomInt(0, num - 1), buffer, sizeof buffer);
+	}
 	GivePlayerItem(client, buffer);
 }
 
