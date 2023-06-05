@@ -1,9 +1,11 @@
 ## Changelog - Cập nhật mới:
 * v1.7 (5 - 6 - 2023)
   - Compile Dev Build 1.12 Ver 7024.
+  - Sửa khôi phục vũ khí khi qua màn. Hoặc chết reset map.
   - Thay đổi 1 vài chỗ khi sử dụng sdktools.
   - Thay thế include left4hooks thành sdktools. 
 * v1.6 (3 - 6 - 2023)
+  - Compile Dev Build 1.12 Ver 7024.
   - Sửa lại tính toán dựa trên trang bị người chơi.
 * v1.5 (29 - 5 - 2023)
   - Add lệnh command mở rộng trong game.
