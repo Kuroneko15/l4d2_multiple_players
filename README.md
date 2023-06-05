@@ -14,4 +14,6 @@ Onigrinal Plugin: Đâu đó trên Alienmodders mà tôi đã quên.
 * [Survivor_Respawn (Harry Version)](https://github.com/fbef0102/L4D1_2-Plugins/tree/master/Survivor_Respawn)
 * [[L4D2]Defib_Fix[Left 4 Fix]](https://forums.alliedmods.net/showthread.php?t=315483)
 
+> Đề cử cài đặt thêm để ko bị lêch voice nhân vật:
+* [l4d2_vocalizebasedmodel (Lyseria Version)](https://github.com/fbef0102/L4D2-Plugins/tree/master/l4d2_vocalizebasedmodel)
   - Bên trong souremod có kèm file readme hướng dẫn sử dụng và những command mong các bạn hãy đọc kỹ trước khi sử dụng.
