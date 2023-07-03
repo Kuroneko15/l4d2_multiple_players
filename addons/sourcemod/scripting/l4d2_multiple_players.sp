@@ -6,7 +6,7 @@
 #define PLUGIN_NAME				"L4D2 Multiple Players"
 #define PLUGIN_AUTHOR			"Lyseria Editor"
 #define PLUGIN_DESCRIPTION		"Edit for me"
-#define PLUGIN_VERSION			"1.7"
+#define PLUGIN_VERSION			"1.8"
 #define PLUGIN_URL				"Somewhere in alliedmodders"
 
 #define GAMEDATA 				"l4d2_multiple_players"
@@ -349,6 +349,8 @@ public void OnPluginStart() {
 	
 	RegConsoleCmd("sm_join",			cmdJoinTeam2,	"Join_the_survivors");
 	RegConsoleCmd("sm_thamgia",			cmdJoinTeam2,	"Join_the_survivors");
+	
+	RegConsoleCmd("sm_kill", 			kill_survivor, "Kill_you_right_now");
 
 	HookEvent("round_end",				Event_RoundEnd,		EventHookMode_PostNoCopy);
 	HookEvent("round_start",			Event_RoundStart,	EventHookMode_PostNoCopy);
@@ -534,6 +536,12 @@ void TakeOverBotMenu(int client) {
 	menu.ExitButton = true;
 	menu.ExitBackButton = true;
 	menu.Display(client, MENU_TIME_FOREVER);
+}
+
+Action kill_survivor (int client,int args)
+{
+	ForcePlayerSuicide(client);
+	return Plugin_Handled;
 }
 
 int TakeOverBot_MenuHandler(Menu menu, MenuAction action, int param1, int param2) {

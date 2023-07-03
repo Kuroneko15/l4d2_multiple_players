@@ -1,4 +1,7 @@
 ## Changelog - Cập nhật mới:
+* v1.8 (07 - 03 - 2023)
+  - Compile Dev Build 1.12 Ver 7028.
+  - Update lệnh !kill khi nhập vào chat sẽ giết bạn ngay lập tức.
 * v1.7 (05 - 06 - 2023)
   - Compile Dev Build 1.12 Ver 7024.
   - Sửa khôi phục vũ khí khi qua màn. Hoặc chết reset map.
